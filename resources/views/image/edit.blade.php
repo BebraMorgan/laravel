@@ -16,7 +16,7 @@
                 </div>
                 <div class="form-group">
                     <label for="image">Картинка</label>
-                    <input type="file" class="form-control-file" id="image" name="image">
+                    <input type="file" value="{{asset( $image->user->phone . '-m2.wsr.ru/photos/' . $image->image)}}" class="form-control-file" id="image" name="image">
                 </div>
                 <button type="submit" class="btn btn-primary">Изменить</button>
             </form>

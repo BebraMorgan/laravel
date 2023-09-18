@@ -22,8 +22,8 @@ class UpdateRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => '',
-            'hashtags' => '',
+            'title' => 'string',
+            'hashtags' => 'string',
             'image' => 'required|mimes:jpg,png,jpeg|max:1024'
         ];
     }

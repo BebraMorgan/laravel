@@ -16,13 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::group(['namespace' => 'App\\Http\\Controllers\\Image\\'], function () {
-    Route::get('/image/create', 'CreateController')->name('image.create')->middleware('auth');
-    Route::get('/image/{image}', 'IndexController')->name('image.show');
-    Route::post('/image', 'StoreController')->name('image.store')->middleware('auth');
-    Route::get('/image', 'IndexController')->name('image.index');
-    Route::get('/image/{image}/edit', 'EditController')->name('image.edit')->middleware('auth');
-    Route::patch('image/{image}', 'UpdateController')->name('image.update')->middleware('auth');
-    Route::delete('image/{image}', 'DestroyController')->name('image.delete')->middleware('auth');
+    Route::get('/photo/create', 'CreateController')->name('image.create')->middleware('auth');
+    Route::get('/photo/{image}', 'IndexController')->name('image.show');
+    Route::post('/photo', 'StoreController')->name('image.store')->middleware('auth');
+    Route::get('/photo', 'IndexController')->name('image.index');
+    Route::get('/photo/{image}/edit', 'EditController')->name('image.edit')->middleware('auth');
+    Route::patch('/photo/{image}', 'UpdateController')->name('image.update')->middleware('auth');
+    Route::delete('/photo/{image}', 'DestroyController')->name('image.delete')->middleware('auth');
 });
 
 Route::group(['namespace' => 'App\\Http\\Controllers\\Auth\\'], function()  {

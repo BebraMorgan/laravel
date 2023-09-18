@@ -10,7 +10,9 @@ class Image extends Model
 {
     use HasFactory;
     use Searchable;
-    protected $fillable = ['title', 'image', 'user_id'];
+
+
+    protected $fillable = ['title', 'image', 'user_id', 'hashtags'];
 
     protected $guarded = false;
     public function user(): BelongsTo

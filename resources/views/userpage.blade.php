@@ -12,10 +12,10 @@
         @if($image->user->id == $user->id)
             <div class="container">
             <hr>
-            <h6>{{$image->title}}</h6>
+            <h6>{{$image->title}} </h6>
             <img src="{{asset( $image->user->phone . '-m2.wsr.ru/photos/' . $image->image)}}" width="400" height="400">
             @if($image->hashtags != null)
-                <p>hashtags:{{$image->hashtags}}</p>
+                <p>hashtags:{{$image->hashtags}}  </p>
             @endif
                 @if($image->user->id == Auth::user()->id)
                     <br>
