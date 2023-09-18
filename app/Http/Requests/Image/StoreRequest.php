@@ -23,8 +23,8 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => 'string',
-            'hashtags' => 'string',
+            'title' => '',
+            'hashtags' => '',
             'image' => 'required|mimes:jpg,png,jpeg|max:1024'
         ];
     }

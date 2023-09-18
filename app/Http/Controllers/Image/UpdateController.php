@@ -20,6 +20,7 @@ class UpdateController extends Controller
         $img->fit($size, $size);
         $img->encode('png');
         $newImageName = time() . '-' . 'user' . '.' . $request->image->extension();
+        unlink(public_path(Auth::user()->phone . '-m2.wsr.ru/photos/') . $image->image);
         $img->save(public_path(Auth::user()->phone . '-m2.wsr.ru/photos/') . $newImageName);
 
         $data = $request->validated();
